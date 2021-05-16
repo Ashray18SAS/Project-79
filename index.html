@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <h1>My Family Book</h1>
+    <img id="Image1" src="https://tse1.mm.bing.net/th?id=OIP.wLCoswCXkXyROE95SbEJFAHaFP&pid=Api&P=0&w=230&h=163">
+    <h2 id="name">Family</h2>
+    <button onclick="update()">Next</button>
+</body>
+<script>
+    var images =[
+    "https://tse4.mm.bing.net/th?id=OIP.3tl0dCldXGgmKTH2rMM5xwHaJ8&pid=Api&P=0&w=300&h=300" ,
+    "https://tse4.mm.bing.net/th?id=OIP.R69YLHqLOyjjoLXTgTPmYAHaGM&pid=Api&P=0&w=202&h=170" ,
+    "https://tse1.mm.bing.net/th?id=OIP.QujDZuL3oQrwV-mRuGszVQHaJ4&pid=Api&P=0&w=300&h=300" ,
+    "https://tse3.mm.bing.net/th?id=OIP.GxkL_yhqSH16UOTcXfJpugHaNK&pid=Api&P=0&w=300&h=300"
+    ]
+    var names=[
+        "Jagruti Gandhi(my mom)", "Bhavin Gandhi(my dad)" , "Misari Gandhi(my sister)", "Ashray Gandhi(myself)"
+    ]
+    var i=0;
+    function update()
+    {
+        i++;
+        var familymembers=3;
+        if(i>familymembers)
+        {
+            i = 0;
+        }
+        var updatedimage= images[i];
+        var updatedname= names[i];
+        document.getElementById("Image1").src = updatedimage;
+        document.getElementById("name").innerHTML = updatedname;
+    }
+</script>
+</html>
